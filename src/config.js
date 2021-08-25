@@ -3,7 +3,7 @@ const config = {
     REGION: "us-east-1",
     BUCKET: "notes-attachments-123",
   },
-  apiGateWay: {
+  apiGateway: {
     REGION: "us-east-1",
     URL: "https://sislvgxub1.execute-api.us-east-1.amazonaws.com/prod",
   },
@@ -14,3 +14,5 @@ const config = {
     IDENTITY_POOL_ID: "us-east-1:645bb9e0-f22f-4717-88b2-b3314b5eecb7",
   },
 };
+
+export default config;
