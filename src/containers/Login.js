@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import { Auth } from "aws-amplify";
-import { useHistory } from "react-router-dom";
 import "./Login.css";
 import { useAppContext } from "../libs/contextLib";
 import LoaderButton from "../components/LoaderButton";
@@ -17,7 +16,6 @@ export default function Login() {
     password: "",
   });
 
-  const history = useHistory();
   function validateForm() {
     return fields.email.length > 0 && fields.password.length > 0;
   }
@@ -28,7 +26,6 @@ export default function Login() {
     try {
       await Auth.signIn(fields.email, fields.password);
       userHasAuthenticated(true);
-      history.push("/");
     } catch (e) {
       onError(e);
       setIsLoading(false);
