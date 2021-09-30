@@ -6,7 +6,7 @@ const config = {
   },
   apiGateway: {
     REGION: "us-east-1",
-    URL: "https://sislvgxub1.execute-api.us-east-1.amazonaws.com/prod",
+    URL: "https://98ppvq1dp7.execute-api.us-east-1.amazonaws.com/prod",
   },
   cognito: {
     REGION: "us-east-1",
