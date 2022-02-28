@@ -10,7 +10,7 @@ plugins:
   - serverless-s3-sync
 
 custom:
-  bucketName: notes-app-client-524522
+  bucketName: notes-app-client-524523
   s3Sync:
     - bucketName: ${self:custom.bucketName}
       localDir: build/

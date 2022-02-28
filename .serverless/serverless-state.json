@@ -87,7 +87,7 @@
           "ReactAppBucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-              "BucketName": "notes-app-client-524522",
+              "BucketName": "notes-app-client-524523",
               "AccessControl": "PublicRead",
               "WebsiteConfiguration": {
                 "IndexDocument": "index.html",
@@ -110,7 +110,7 @@
                     "Action": [
                       "s3:GetObject"
                     ],
-                    "Resource": "arn:aws:s3:::notes-app-client-524522/*"
+                    "Resource": "arn:aws:s3:::notes-app-client-524523/*"
                   }
                 ]
               }
@@ -122,7 +122,7 @@
               "DistributionConfig": {
                 "Origins": [
                   {
-                    "DomainName": "notes-app-client-524522.s3.amazonaws.com",
+                    "DomainName": "notes-app-client-524523.s3.amazonaws.com",
                     "Id": "ReactApp",
                     "CustomOriginConfig": {
                       "HTTPPort": 80,
@@ -132,6 +132,7 @@
                   }
                 ],
                 "Enabled": "true",
+                "DefaultRootObject": "index.html",
                 "CustomErrorResponses": [
                   {
                     "ErrorCode": 404,
@@ -260,10 +261,10 @@
       }
     },
     "custom": {
-      "bucketName": "notes-app-client-524522",
+      "bucketName": "notes-app-client-524523",
       "s3Sync": [
         {
-          "bucketName": "notes-app-client-524522",
+          "bucketName": "notes-app-client-524523",
           "localDir": "build/"
         }
       ]
@@ -278,7 +279,7 @@
         "ReactAppBucket": {
           "Type": "AWS::S3::Bucket",
           "Properties": {
-            "BucketName": "notes-app-client-524522",
+            "BucketName": "notes-app-client-524523",
             "AccessControl": "PublicRead",
             "WebsiteConfiguration": {
               "IndexDocument": "index.html",
@@ -301,7 +302,7 @@
                   "Action": [
                     "s3:GetObject"
                   ],
-                  "Resource": "arn:aws:s3:::notes-app-client-524522/*"
+                  "Resource": "arn:aws:s3:::notes-app-client-524523/*"
                 }
               ]
             }
@@ -313,7 +314,7 @@
             "DistributionConfig": {
               "Origins": [
                 {
-                  "DomainName": "notes-app-client-524522.s3.amazonaws.com",
+                  "DomainName": "notes-app-client-524523.s3.amazonaws.com",
                   "Id": "ReactApp",
                   "CustomOriginConfig": {
                     "HTTPPort": 80,
@@ -323,6 +324,7 @@
                 }
               ],
               "Enabled": "true",
+              "DefaultRootObject": "index.html",
               "CustomErrorResponses": [
                 {
                   "ErrorCode": 404,
@@ -361,9 +363,7 @@
     "configValidationMode": "warn",
     "serviceFilename": "serverless.yml",
     "initialServerlessConfig": {
-      "service": {
-        "$ref": "$[\"service\"][\"serviceObject\"]"
-      },
+      "service": "notes-api-client",
       "provider": {
         "$ref": "$[\"service\"][\"provider\"]"
       },
@@ -377,11 +377,10 @@
         "$ref": "$[\"service\"][\"resources\"]"
       }
     },
-    "layers": {},
-    "isDashboardMonitoringPreconfigured": false
+    "layers": {}
   },
   "package": {
-    "artifactDirectoryName": "serverless/notes-api-client/dev/1633087119471-2021-10-01T11:18:39.471Z",
+    "artifactDirectoryName": "serverless/notes-api-client/dev/1646070652098-2022-02-28T17:50:52.098Z",
     "artifact": ""
   }
 }
